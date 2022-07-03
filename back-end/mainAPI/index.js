@@ -2,6 +2,9 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
+var cors = require("cors");
+
+app.use(cors());
 
 /*
 com o bloco abaixo eu permito a leitura de 
