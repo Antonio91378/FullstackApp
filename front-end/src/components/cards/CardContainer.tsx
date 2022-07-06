@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
+import api from "../../services/index";
 import Card from "./Card";
-import api from "./services/index";
-function App() {
+import "./index.sass";
+interface CardContainerProps {
+  children?: React.ReactNode;
+}
+
+const CardContainer: React.FC<CardContainerProps> = ({ children }) => {
   const [data, setData] = useState<any[]>([]);
   useEffect(() => {
     api.get("/figurinha").then(({ data }) => {
@@ -9,12 +14,12 @@ function App() {
     });
   }, []);
   return (
-    <div className="App">
+    <div className="card-container">
       {data?.map((card) => (
         <Card key={card._id} nome={card.nome} ataque={card.ataque} />
       ))}
     </div>
   );
-}
+};
 
-export default App;
+export default CardContainer;

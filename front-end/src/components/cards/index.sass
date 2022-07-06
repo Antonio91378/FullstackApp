@@ -1,0 +1,74 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    .card-container
+        display: flex
+        justify-content: flex-start
+        flex-wrap: wrap
+        border: 1px solid #e7e792
+        gap: 5px
+        padding: 5px
+        .card
+            flex-direction: column
+            display: flex
+            font-family: 'Roboto', sans-serif
+            font-weight: 300
+            border: 1px solid #e7e792
+            height: 300px
+            gap: 4px
+            width: 180px
+            .card-stars
+                border: 1px solid #e7e792
+                height: 5%
+                margin-top: 4px
+                margin-left: 4px
+                margin-right: 4px
+            .card-image
+                border: 1px solid #e7e792
+                height: 65%
+                margin-left: 4px
+                margin-right: 4px
+            .card-description
+                display: flex
+                flex-direction: column
+                justify-content: flex-start
+                font-size: .8rem
+                border: 1px solid #e7e792
+                border-bottom: none
+                border-left: none
+                border-right: none
+                height: 30%
+                margin-bottom: 4px
+                margin-left: 4px
+                margin-right: 4px
+                .card-name
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    font-size: 1rem
+                    font-weight: 400
+                    border-bottom: 1px solid #e7e792
+                    border-left: 1px solid #e7e792
+                    border-right: 1px solid #e7e792
+
+                    height: 24%
+                .card-sub-description
+                    display: flex
+                    flex-direction: row
+                    font-size: .65rem
+                    .left-card-description
+                        border-bottom: 1px solid #e7e792
+                        border-left: 1px solid #e7e792
+                        width: 33%
+                        padding-left: 2px
+                    .right-card-description
+                        border-bottom: 1px solid #e7e792
+                        border-right: 1px solid #e7e792
+                        border-left: 1px solid #e7e792
+                        border-top: none
+                        width: 70%
+                        padding-left: 2px
+                    &:last-child
+                        height: 60%
+                        border-bottom: none !important
